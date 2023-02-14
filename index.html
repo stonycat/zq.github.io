@@ -1089,7 +1089,25 @@ content: "\f12e";
   87.5% {
       box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
-}</style>
+}
+
+.is-divider[data-content]::after, .is-divider-vertical[data-content]::after {
+    background: hsl(0deg,0%,100%);
+    color: hsl(0deg,0%,71%);
+    content: attr(data-content);
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 0.4rem 0.8rem;
+    -webkit-transform: translateY(-1.1rem);
+    -ms-transform: translateY(-1.1rem);
+    transform: translateY(-1.1rem);
+    text-align: center;
+}
+*::after {
+    box-sizing: inherit;
+}
+
+</style>
 <style type="text/css">/* This is not a zero-length file! */
 </style>
 <!-- <script charset="utf-8" src="./QZ_files/horizon_timeline.a7991bb824d62c8d5038ddd875db8389.js"></script> -->
@@ -1105,8 +1123,8 @@ content: "\f12e";
     
   <div class="row justify-content-md-center">
       <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <!-- <img src="./QZ_files/photo2020_qian.jpeg" class="img-responsive center-block" width="170"> -->
-        <img src="./QZ_files/photoQZ_202004.jpeg" class="img-responsive center-block" width="170">
+        <img src="./QZ_files/Photo202111.jpg" class="img-responsive center-block" width="240">
+        <!-- <img src="./QZ_files/photoQZ_202004.jpeg" class="img-responsive center-block" width="200"> -->
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 line">
             
@@ -1161,18 +1179,23 @@ content: "\f12e";
           <h3>Latest News</h3>
         </span>
         <p>
+          Feb 2023: <i>"Unfold and Go Touch": A Portable Method for Making Existing Touchscreens
+          Accessible to Blind and Low Vision People in Self-Service Terminals</i> @ CHI LBW 2023. Congrat to Weiyue.
+        </p>
+        <p>
           Jan 2023: Visiting <a href="https://hkust-cival.com/">Prof. Zeng's Group </a>(CIVAL Lab) in HKUST(GZ).
         </p>
         <p>
           Sept 2022: Started internship in Human Machine Interaction (HMI) Lab (Huawei).
         </p>
         <p>
-          June 2022: Our paper was accepted by <span>CSCW 2022</span>: Bias-Aware Design for Informed Decisions: Raising Awareness of Self-Selection Bias in User Ratings and Reviews.
+          June 2022: Our paper was accepted by <span>CSCW 2022</span>: <i>>Bias-Aware Design for Informed Decisions: Raising Awareness of Self-Selection Bias in User Ratings and Reviews.</i>
         <p>
-          April 2022: Passed the PhD Qualified Exam (PQE) and became a PhD candidate!
+          April 2022: Passed the PhD Qualified Exam (PQE) and became a PhD candidate! My <a src="./QZ_files/Qian_PQE_final.pdf">PQE Presentation</a> is about evaluation practice of immersive visualizaion.
+          .
         </p>
         <p>
-          Jan 2022: Our paper was accepted by <span>CSCW 2022</span>: Persua: A Visual Interactive System to Enhance the Persuasiveness of Arguments in Online Discussion.
+          Jan 2022: Our paper was accepted by <span>CSCW 2022</span>: <i>A Visual Interactive System to Enhance the Persuasiveness of Arguments in Online Discussion.</i> 
         </p>
       </div>
       
@@ -1193,7 +1216,61 @@ content: "\f12e";
       <div mv-bar="no-login" mv-app="publications" typeof="Item" mv-permissions="read login" style="" class=""><div class="mv-bar mv-ui">
         <!--mv-status--><!--mv-edit--><!--mv-save--><!--mv-logout--></div>
         
-        
+        <article class="row" property="paper" mv-multiple="" mv-if="true" typeof="Item">
+          
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"> 
+            <img class="img-responsive center-block" property="image" src="./QZ_files/paperFig/unfold-CHI LBW23.png" alt="img alt" style="border: 1px #737373 solid; margin-top: 6px;" aria-label="Image">
+          </div>
+          
+          
+          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 pubbody">
+            
+            <b><a href="#">
+                <span class="mini-header2" property="title" aria-label="Title" mv-attribute="none">Unfold and Go Touch": A Portable Method for Making Existing Touchscreens Accessible to Blind and Low Vision People in Self-Service Terminals.</span>
+              </a>
+            </b>
+              <br>
+            
+            <span property="author" mv-multiple="" typeof="Item">
+                <span property="author_name" mv-edit-list="memberList" aria-label="Author name" mv-attribute="none"></span>Weiyue Lin</span><span property="author" mv-multiple="" typeof="Item">
+                <span property="author_name" mv-edit-list="memberList" class="" aria-label="Author name" mv-attribute="none">Ting Li</span></span><span property="author" mv-multiple="" typeof="Item">
+                <span property="author_name" mv-edit-list="memberList" class="" aria-label="Author name" mv-attribute="none">Liu Liu</span></span><span property="author" mv-multiple="" typeof="Item"></span>
+                <span property="author_name" mv-edit-list="memberList" class="" aria-label="Author name" mv-attribute="none"><strong>Qian Zhu</strong></span></span>
+                <!--mv-marker-->
+            <br>
+              <a href="https://chi2023.acm.org/for-authors/late-breaking-work/" property="conference url" aria-label="Conference url">
+                <span property="conference" aria-label="Conference" mv-attribute="none">CHI LBW</span>
+                <span property="year" aria-label="Year" mv-attribute="none">2023</span>
+              </a>
+              
+              <span class="btn btn-xs btn-warning mv-empty" property="award" aria-label="Award" mv-attribute="none"></span>
+              
+            <br>
+              
+            <span property="links" typeof="Item">
+              <a href="#" property="pdf_url" class="button" aria-label="Pdf url">
+                <img src="./QZ_files/pdf.png"><span>PDF Coming Soon</span>
+              </a>
+              
+              <!-- <a href="https://behavioral-data.github.io/reddit_values_surveys_public/" property="website_url" class="button" aria-label="Website url">
+                <img src="./QZ_files/earth4.png"><span> Website</span>
+              </a> -->
+              
+              <!-- <a href="https://github.com/stonycat/Bias-Aware-Design-CSCW22/" property="code_url" class="button" aria-label="Code url">
+                <img src="./QZ_files/github5.png"><span> Code</span>
+              </a> -->
+
+              <!-- <a href="" property="video_url" class="button" aria-label="Video url">
+                <img src="./QZ_files/youtube.jpg"><span> Video</span>
+              </a> -->
+              <br><br>
+            </span>
+              
+              
+            </div>
+          </article>
+
+
         <article class="row" property="paper" mv-multiple="" mv-if="true" typeof="Item">
           
           <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"> 
@@ -1337,7 +1414,11 @@ content: "\f12e";
             </div>
           </article>
           
-          
+          <hr>
+          <div class="is-divider" data-content="Before PhD ⇩"></div>
+            
+          </div>
+
           <article class="row" property="paper" mv-multiple="" mv-if="true" typeof="Item">
           
             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"> 
