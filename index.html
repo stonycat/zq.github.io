@@ -1380,3 +1380,35 @@
             </div>
         </div>
     </footer>
+
+
+    <style>
+      /* 容器样式 - 强制居中+尺寸控制 */
+      .clustrmaps-container {
+        width: 150px;          /* 容器宽度 */
+        height: 150px;         /* 容器高度 */
+        margin: 0 auto;        /* 水平居中 */
+        position: relative;    /* 为子元素绝对定位做准备 */
+        overflow: hidden;      /* 隐藏溢出内容 */
+        border-radius: 8px;    /* 可选：圆角效果 */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 可选：阴影 */
+      }
+      
+      /* 覆盖 ClustrMaps 生成的默认样式 */
+      .clustrmaps-container iframe,
+      .clustrmaps-container #clstr_map {
+        width: 100% !important;   /* 强制宽度填满容器 */
+        height: 100% !important;   /* 强制高度填满容器 */
+        position: absolute !important;
+        left: 50% !important;     /* 水平居中 */
+        top: 50% !important;       /* 垂直居中 */
+        transform: translate(-50%, -50%) !important; /* 精确居中 */
+      }
+      </style>
+      
+      <!-- HTML 容器 -->
+    <div class="clustrmaps-container" style="width: 150px; height: 150px; overflow: hidden;">
+      <!-- 粘贴ClustrMaps的原始代码 -->
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=57lDILHByVSNI6ez8XC-jwynwFNur9o5ZQhJpyQGPj4"></script>
+    </div>
+    <!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=57lDILHByVSNI6ez8XC-jwynwFNur9o5ZQhJpyQGPj4&cl=ffffff&w=a"></script> -->
