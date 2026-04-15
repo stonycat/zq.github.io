@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CV | ZHU Qian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="QZ_files/icon/10001_703_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #2E8B9A;
+      --accent-light: #e8f4f6;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --bg: #ffffff;
+      --bg-warm: #faf9f7;
+      --border: #e8e6e3;
+      --award: #b5232a;
+      --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-heading: 'Source Serif 4', Georgia, serif;
+      --max-width: 860px;
+    }
+
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-name:hover { text-decoration: none; }
+    .nav-name span { font-weight: 400; }
+    .nav-links { display: flex; gap: 24px; font-size: 0.9rem; }
+    .nav-links a { color: var(--text-secondary); font-weight: 400; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── CV Header ── */
+    .cv-header {
+      padding: 48px 0 32px;
+      border-bottom: 2px solid var(--text);
+      margin-bottom: 36px;
+    }
+    .cv-header h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .cv-header-info {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .cv-header-info a { color: var(--accent); }
+    .cv-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      border-radius: 5px;
+      transition: all 0.15s;
+    }
+    .cv-download:hover {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ── CV Sections ── */
+    .cv-section {
+      margin-bottom: 40px;
+    }
+    .cv-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    /* ── CV Entries (timeline style) ── */
+    .cv-entry {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+    }
+    .cv-year {
+      font-weight: 600;
+      color: var(--text-muted);
+      padding-top: 1px;
+    }
+    .cv-content { line-height: 1.6; }
+    .cv-content strong { font-weight: 600; color: var(--text); }
+    .cv-role { color: var(--text-secondary); font-style: italic; }
+    .cv-org { color: var(--text); }
+    .cv-detail {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .cv-award-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--award);
+      margin-left: 4px;
+    }
+
+    /* ── Simple list entries ── */
+    .cv-list {
+      list-style: none;
+      font-size: 0.92rem;
+    }
+    .cv-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.55;
+    }
+    .cv-list li:last-child { border-bottom: none; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+    footer p { font-size: 0.78rem; color: var(--text-muted); }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════ Navigation ══════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html"><span>Qian</span> ZHU</a>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <!-- <a href="cv.html" style="color:var(--accent); font-weight:600;">CV</a> -->
+      <!-- <a href="https://zhuqian.org/index-cn.html">中文</a> -->
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ══════════ CV Header ══════════ -->
+<div class="cv-header">
+  <h1>Qian Zhu (朱倩)</h1>
+  <div class="cv-header-info">
+    DEKE Lab, School of Information, Renmin University of China<br>
+    Information Building 323<br>
+    qian(dot)z@ruc(dot)edu(dot)cn · <a href="https://zhuqian.org">zhuqian.org</a>
+  </div>
+  <!-- <a class="cv-download" href="./QZ_files/CV/cv_QianZhu.pdf">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download PDF
+  </a> -->
+</div>
+
+<!-- ══════════ Education ══════════ -->
+<section class="cv-section" id="education">
+  <h2 class="cv-section-title">Education</h2>
+
+  <div class="cv-entry">
+    <div class="cv-year">2020–2024</div>
+    <div class="cv-content">
+      <strong>Ph.D. in Computer Science and Engineering</strong><br>
+      <span class="cv-org">The Hong Kong University of Science and Technology (HKUST)</span>, Hong Kong
+      <div class="cv-detail">Advisor: Prof. Xiaojuan Ma</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2017–2020</div>
+    <div class="cv-content">
+      <strong>M.S. in Computer Science</strong><br>
+      <span class="cv-org">University of Chinese Academy of Sciences (UCAS)</span>, Beijing
+      <div class="cv-detail">Institute of Software, Chinese Academy of Sciences (ISCAS)</div>
+      <div class="cv-detail">Advisor: Prof. Cuixia Ma</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2013–2017</div>
+    <div class="cv-content">
+      <strong>B.Eng. in Digital Media and Technology</strong><br>
+      <span class="cv-org">Shandong University (SDU)</span>, Shandong
+      <div class="cv-detail">Advisor: Prof. Juan Liu</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ Academic Experience ══════════ -->
+<section class="cv-section" id="experience">
+  <h2 class="cv-section-title">Professional Experience</h2>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025–</div>
+    <div class="cv-content">
+      <strong>Assistant Professor (Lecturer)</strong>, School of Information<br>
+      <span class="cv-org">Renmin University of China (RUC)</span>, Beijing
+      <div class="cv-detail">DEKE Key Lab of Data Engineering and Knowledge Engineering</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2024–25</div>
+    <div class="cv-content">
+      <strong>Visiting Scholar</strong>, School of Information<br>
+      <span class="cv-org">Renmin University of China (RUC)</span>, Beijing
+      <div class="cv-detail">IDEAS Lab</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2023-2024</div>
+    <div class="cv-content">
+      <strong>Visiting Researcher</strong>, School of Interactive Computing<br>
+      <span class="cv-org">Georgia Institute of Technology</span>, Atlanta, GA
+      <div class="cv-detail">Immersive Visualization &amp; Interaction Group · Mentored by Dr. Yalong Yang</div>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2023</div>
+    <div class="cv-content">
+      <strong>Research Assistant</strong>, Computational Media and Arts<br>
+      <span class="cv-org">HKUST(GZ)</span>, Guangzhou
+      <div class="cv-detail">Collaborative Interactive Visualization &amp; Analysis Lab · Mentored by Dr. Wei Zeng</div>
+    </div>
+  </div>
+
+    <div class="cv-entry">
+    <div class="cv-year">2022</div>
+    <div class="cv-content">
+      <strong>Ph.D. Student Internship</strong>, Human-Machine Lab<br>
+      <span class="cv-org">Huawei Tech. Investment Co., Ltd.</span>, Shenzhen
+      <div class="cv-detail">Mentored by Dr. Zhenyi He</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ Selected Publications ══════════ -->
+<section class="cv-section" id="publications">
+  <h2 class="cv-section-title">Selected Publications</h2>
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin-bottom:16px; margin-top:4px;">Conference and Journal Papers (strictly peer-reviewed)</h3>
+  <div class="cv-entry">
+    <div class="cv-year">2026</div>
+    <div class="cv-content">
+      Zhiyao Yang, Zhan Wang, Yihan Hou, <strong>Qian Zhu</strong>, Wei Zeng.
+      Less is More Afar: Responsive Design for Situated Visualization Based on Viewing Distance.
+      <em>Virtual Reality 2026.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">
+      Zhan Wang, <strong>Qian Zhu</strong>, David Yip, Fugee Tsung, Wei Zeng.
+      CineFolio: Cinematography-guided Camera Planning for Immersive Narrative Visualization.
+      <em>Visual Informatics 2025.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">
+      Tao Lu, <strong>Qian Zhu</strong>, Tiffany Ma, Wong Kam-Kwai, Catherine Xie, Alex Endert, Yalong Yang.
+      Ego vs. Exo and Active vs. Passive: Investigating the Individual and Combined Effects of Viewpoint and Navigation on Spatial Immersion and Understanding in Immersive Storytelling.
+      <em>ACM CHI 2025.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">
+      Hanfang Lyu, Xiaoyu Wang, Nandi Zhang, Shuai Ma, <strong>Qian Zhu</strong>, Yuhan Luo, Fugee Tsung, Xiaojuan Ma.
+      Signaling Human Intentions to Service Robots: Understanding the Use of Social Cues during In-Person Conversations.
+      <em>ACM CHI 2025.</em> <span class="cv-award-tag">Honorable Mention Award</span>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Zhuo Wang, Wei Zeng, Tong Wai, Weiyue Lin, Xiaojuan Ma.
+      Make Interaction Situated: Designing User Acceptable Interaction for Situated Visualization in Public Environments.
+      <em>ACM CHI 2024.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Tao Lu, Shunan Guo, Xiaojuan Ma, Yalong Yang.
+      CompositingVis: Exploring Interactions for Creating Composite Visualizations in Immersive Environments.
+      <em>IEEE VIS 2024 (TVCG).</em>
+    </div>
+  </div>
+  
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Dakuo Wang, Shuai Ma, April Yi Wang, Zixin Chen, Udayan Khurana, Xiaojuan Ma.
+      Towards Feature Engineering with Human and AI's Knowledge: Understanding Data Workers' Perceptions in Human &amp; AI-Assisted Feature Engineering Design.
+      <em>ACM DIS 2024.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">
+      Yilin Ye, <strong>Qian Zhu</strong>, Shishi Xiao, Kang Zhang, Wei Zeng.
+      The Contemporary Art of Image Search: Iterative User Intent Expansion via Vision-Language Model.
+      <em>ACM CSCW 2024.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2023</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Linping Yuan, Zian Xu, Leni Yang, Meng Xia, Zhuo Wang, Hai-Ning Liang, Xiaojuan Ma.
+      From Reader to Experiencer: Design and Evaluation of an Interactive VR Data Story for Promoting the Situation Awareness of Public Health Threats.
+      <em>IJHCS 2023.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2022</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Leo Yu-Ho Lo, Meng Xia, Zixin Chen, Xiaojuan Ma.
+      Bias-Aware Design for Informed Decisions: Raising Awareness of Self-Selection Bias in User Ratings and Reviews.
+      <em>ACM CSCW 2022.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2022</div>
+    <div class="cv-content">
+      Meng Xia, <strong>Qian Zhu</strong>, Xingbo Wang, Fei Nie, Huamin Qu, Xiaojuan Ma.
+      Persua: A Visual Interactive System to Enhance the Persuasiveness of Arguments in Online Discussion.
+      <em>ACM CSCW 2022.</em>
+    </div>
+  </div>
+
+   <div class="cv-entry">
+    <div class="cv-year">2020</div>
+    <div class="cv-content">
+      Cuixia Ma, Jiancheng Song, <strong>Qian Zhu</strong>, Kevin Maher, Zeyu Huang, Hong-An Wang.
+      EmotionMap: Visual Analysis of Video Emotional Content on a Map.
+      <em>Journal of Computer Science and Technology 2020.</em>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin:24px 0 16px;">Short Papers, Posters, and Extended Abstracts</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">
+      Xiaofeng Dou, Jiahe Dong, Shuhao Zhang, <strong>Qian Zhu</strong>, Quan Li.
+      Danmaku Avatar: Enabling Asynchronous Co-viewing Experiences in Virtual Reality via Danmaku.
+      <em>ACM CHI 2025 LBW.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2023</div>
+    <div class="cv-content">
+      Weiyue Lin, Ting Li, Liu Liu, <strong>Qian Zhu</strong>.
+      "Unfold and Go Touch": A Portable Method for Making Existing Touchscreens Accessible to Blind and Low Vision People in Self-Service Terminals.
+      <em>ACM CHI 2023 LBW.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2019</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Shuai Ma, Cuixia Ma.
+      Pre-screen: Assisting Material Screening in Early-stage of Video Editing.
+      <em>ACM UIST 2019 Adjunct.</em>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">2019</div>
+    <div class="cv-content">
+      <strong>Qian Zhu</strong>, Shuai Ma.
+      What Did I Miss? Assisting User-adaptive Missed Content Reviewing in MOOC Learning.
+      <em>ACM UIST 2019 Adjunct.</em>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════ Honors & Awards ══════════ -->
+<section class="cv-section" id="awards">
+  <h2 class="cv-section-title">Honors &amp; Awards</h2>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin-bottom:16px; margin-top:4px;">Academic Awards</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">Best Paper Honorable Mention Award, <strong>ACM CHI 2025</strong>, Yokohama, Japan</div>
+  </div>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin:24px 0 16px;">Service Awards</h3>
+
+    <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">Special Recognition for Outstanding Reviews, <strong>ACM CHI '26</strong>, full paper</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">Special Recognition for Outstanding Reviews, <strong>ACM UIST '25</strong>, full paper</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">Special Recognition for Outstanding Reviews, <strong>ACM CHI '25</strong>, full paper</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">2× Special Recognition for Outstanding Reviews, <strong>ACM CHI '24</strong>, full paper</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">Special Recognition for Outstanding Reviews, <strong>ACM CHI '24</strong>, Late-Breaking Work</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2023</div>
+    <div class="cv-content">Special Recognition for Outstanding Reviews, <strong>IEEE VIS '23</strong>, full paper</div>
+  </div>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin:24px 0 16px;">Fellowships &amp; Scholarships</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">2023–24</div>
+    <div class="cv-content">Overseas Research Award, HKUST</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2023–24</div>
+    <div class="cv-content">Hong Kong Postgraduate Studentship, HKUST</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2020–22</div>
+    <div class="cv-content">Huawei Ph.D. Fellowship, Huawei Tech. Co. Ltd.</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2019</div>
+    <div class="cv-content">First-class Scholarship for Outstanding Students, Chinese Academy of Sciences</div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2017</div>
+    <div class="cv-content">Outstanding Undergraduate, Shandong University</div>
+  </div>
+</section>
+
+<!-- ══════════ Teaching ══════════ -->
+<section class="cv-section" id="teaching">
+  <h2 class="cv-section-title">Teaching</h2>
+
+  <div class="cv-entry">
+    <div class="cv-year">Fall 2026</div>
+    <div class="cv-content">
+      <strong>Human-Computer Interaction</strong><br>
+      <span class="cv-detail">Renmin University of China</span>
+    </div>
+  </div>
+
+  <div class="cv-entry">
+    <div class="cv-year">Spring 2026</div>
+    <div class="cv-content">
+      <strong>Advanced Python Programming</strong><br>
+      <span class="cv-detail">Renmin University of China</span>
+    </div>
+  </div>
+
+
+<h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin-bottom:16px; margin-top:4px;">Teaching Assistant</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">Fall 2021, 2023</div>
+    <div class="cv-content">
+      <strong>COMP 4462 Data Visualization</strong> (by Prof. Xiaojuan Ma)<br>
+      <span class="cv-detail">HKUST</span>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">Spring 2021</div>
+    <div class="cv-content">
+      <strong>COMP 1029P Python Programming</strong> (by Lecturer Gibson Lam)<br>
+      <span class="cv-detail">HKUST</span>
+    </div>
+  </div>
+  <!-- Add more courses here -->
+
+</section>
+
+<!-- ══════════ Professional Service ══════════ -->
+<section class="cv-section" id="service">
+  <h2 class="cv-section-title">Academic Service</h2>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin-bottom:16px; margin-top:4px;">Program Committee</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">2026</div>
+    <div class="cv-content">ACM CHI Subcommittee AC, IEEE PacificVis PC, VINCI PC</div>
+  </div>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin:24px 0 16px;">Conference Reviewing</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">Venue</div>
+    <div class="cv-content" style="line-height:1.85;">
+      ACM CHI (2022–2026) · ACM UIST (2022–2026) · IEEE VIS (2022–2026) · EuroVis (2025) · IEEE PacificVis (2024) · ACM SIGGRAPH Asia (2024) · ACM DIS (2024) · ACM CSCW (2022–2023) · ACM CHI LBW (2022–2025) · VINCI (2024) · ChinaVis (2022)
+    </div>
+  </div>
+
+  <h3 style="font-size:0.95rem; font-weight:600; color:var(--text-secondary); margin:24px 0 16px;">Journal Reviewing</h3>
+
+  <div class="cv-entry">
+    <div class="cv-year">Journal</div>
+    <div class="cv-content" style="line-height:1.85;">
+      International Journal of Human-Computer Studies (IJHCS, 2025) · ACM Transactions on Computer-Human Interaction (TOCHI, 2021) · Journal of Computer Science and Technology (JCST, 2019)
+    </div>
+  </div>
+</section>
+<section class="cv-section" id="mentoring">
+  <h2 class="cv-section-title">Mentoring Experience</h2>
+
+  <div class="cv-entry">
+    <div class="cv-year">2025</div>
+    <div class="cv-content">
+      <strong>Yi Hua</strong> (Bachelor, South China University of Technology) ·
+      <strong>Ziyao Zhang</strong> (Parson) ·
+      <strong>Rui Zhang </strong>(Tsinghua University) ·
+      <strong>Yupei Luo</strong> (Bachelor, RUC) ·
+      <strong>Yifan Wang</strong> (Master, RUC; co-advisor: Yunhan Wang)
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2024</div>
+    <div class="cv-content">
+      <strong>Tao Lu</strong> (Master, Georgia Tech; co-advisor: Yalong Yang) ·
+      <strong>Zhiyao Yang</strong> (PhD, HKUST(GZ); co-advisor: Wei Zeng)
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2023</div>
+    <div class="cv-content">
+      <strong>Yilin Ye</strong> (PhD, HKUST(GZ); co-advisor: Wei Zeng) ·
+      <strong>Zhan Wang</strong> (PhD, HKUST(GZ); co-advisor: Wei Zeng) ·
+      <strong>Zhuo Wang</strong> (Undergrad, Xi'an Jiaotong Liverpool University) ·
+      <strong>Weiyue Lin</strong> (Master, Peking University)
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2021–22</div>
+    <div class="cv-content">
+      <strong>Zian Xu</strong> (Undergrad, HKUST; co-advisor: Xiaojuan Ma) ·
+      <strong>Zixin Chen</strong> (Undergrad, HKUST; co-advisor: Xiaojuan Ma)
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2020</div>
+    <div class="cv-content">
+      <strong>Fei Nie</strong> (Undergrad, HKUST; co-advisor: Xiaojuan Ma)
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- ══════════ Footer ══════════ -->
+<footer>
+  <p>The views presented on this website are my own and do not necessarily represent the views of my affiliations.</p>
+</footer>
+
+</body>
+</html>
